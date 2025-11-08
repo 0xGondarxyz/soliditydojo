@@ -231,7 +231,9 @@ body {
 
 .code-block {
   font-family: "Courier New", monospace;
-  color: #4ecdc4;
+  /* color: #4ecdc4; */
+  color: white;
+
   font-size: 14px;
   line-height: 1.6;
   white-space: pre;

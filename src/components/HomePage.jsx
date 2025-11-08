@@ -1,18 +1,20 @@
 import React from "react";
-import { contractsData } from "../data/contractsData";
+// import { contractsData } from "../data/contractsData";
+import { contractsData } from "../contracts/index";
 
 export default function HomePage({ activeContract }) {
   const contract = contractsData[activeContract];
 
   const highlightCode = (code) => {
-    return code
-      .replace(
-        /(pragma|contract|function|public|private|view|returns|require|mapping|string|uint256|address|memory|payable|bool|struct)/g,
-        '<span class="keyword">$1</span>'
-      )
-      .replace(/(".*?"|\^0\.8\.0)/g, '<span class="string">$1</span>')
-      .replace(/(\/\/.*)/g, '<span class="comment">$1</span>')
-      .replace(/\b([A-Z][a-zA-Z0-9]*)\b/g, '<span class="function">$1</span>');
+    return code;
+    //these are completely useless and wrong, better keep deleted
+    // .replace(
+    //   /(pragma|contract|function|public|private|view|returns|require|mapping|string|uint256|address|memory|payable|bool|struct)/g
+    //   // '<span class="keyword">$1</span>'
+    // )
+    // .replace(/(".*?"|\^0\.8\.0)/g, '<span class="string">$1</span>')
+    // .replace(/(\/\/.*)/g, '<span class="comment">$1</span>')
+    // .replace(/\b([A-Z][a-zA-Z0-9]*)\b/g, '<span class="function">$1</span>');
   };
 
   return (

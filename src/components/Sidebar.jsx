@@ -9,12 +9,10 @@ const contractsByLevel = {
   intermediate: [
     { id: "token", label: "ERC20 Token" },
     { id: "nft", label: "NFT Contract" },
-    { id: "voting", label: "Voting System" },
   ],
   advanced: [
     { id: "defi", label: "DeFi Protocol" },
     { id: "dao", label: "DAO Contract" },
-    { id: "proxy", label: "Proxy Pattern" },
   ],
 };
 
