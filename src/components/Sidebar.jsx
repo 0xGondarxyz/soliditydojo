@@ -1,19 +1,19 @@
 import React from "react";
 
 const contractsByLevel = {
-  beginner: [
-    { id: "storage", label: "Simple Storage" },
-    { id: "counter", label: "Counter Contract" },
+  smartContracts: [
+    { id: "staking", label: "Staking Contract" },
+    { id: "vesting", label: "Vesting Contract" },
     { id: "greeting", label: "Greeting Contract" },
   ],
-  intermediate: [
+  security: [
     { id: "token", label: "ERC20 Token" },
     { id: "nft", label: "NFT Contract" },
   ],
-  advanced: [
-    { id: "defi", label: "DeFi Protocol" },
-    { id: "dao", label: "DAO Contract" },
-  ],
+  // advanced: [
+  //   { id: "defi", label: "DeFi Protocol" },
+  //   { id: "dao", label: "DAO Contract" },
+  // ],
 };
 
 export default function Sidebar({
@@ -35,8 +35,8 @@ export default function Sidebar({
   return (
     <div className={`sidebar ${!sidebarVisible ? "hidden" : ""}`}>
       <div className="sidebar-section">
-        <div className="sidebar-title">🔰 Beginner</div>
-        {contractsByLevel.beginner.map((contract) => (
+        <div className="sidebar-title">🔰 Smart Contracts</div>
+        {contractsByLevel.smartContracts.map((contract) => (
           <div
             key={contract.id}
             className={`contract-item ${
@@ -50,8 +50,8 @@ export default function Sidebar({
       </div>
 
       <div className="sidebar-section">
-        <div className="sidebar-title">⚙️ Intermediate</div>
-        {contractsByLevel.intermediate.map((contract) => (
+        <div className="sidebar-title">⚙️ Security</div>
+        {contractsByLevel.security.map((contract) => (
           <div
             key={contract.id}
             className={`contract-item ${
@@ -64,7 +64,7 @@ export default function Sidebar({
         ))}
       </div>
 
-      <div className="sidebar-section">
+      {/* <div className="sidebar-section">
         <div className="sidebar-title">🚀 Advanced</div>
         {contractsByLevel.advanced.map((contract) => (
           <div
@@ -77,7 +77,7 @@ export default function Sidebar({
             {contract.label}
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="about-link" onClick={() => setActivePage("about")}>
         📚 About This Project

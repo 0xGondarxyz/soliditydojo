@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <>
       <div className="hero-section">
-        <div className="hero-title">Welcome to SolidityDojo</div>
+        <div className="hero-title">Welcome to DojoSolidity</div>
         <p className="hero-text">
           Your ultimate destination for learning Solidity and smart contract
           development! This platform provides comprehensive tutorials,
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <div className="project-section">
         <div className="project-title">🎯 About This Project</div>
         <p className="project-text">
-          <strong>SolidityDojo</strong> was created to bridge the gap between
+          <strong>DojoSolidity</strong> was created to bridge the gap between
           blockchain theory and practical smart contract development. Each
           contract comes with detailed video explanations, complete source code,
           and GitHub repositories you can clone and modify.

@@ -19,7 +19,7 @@ export default function Header({
 
   return (
     <div className="header">
-      <div className="logo">⚡ SolidityDojo</div>
+      <div className="logo">⚡ DojoSolidity</div>
 
       <div
         className="hamburger"

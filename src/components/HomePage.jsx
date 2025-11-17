@@ -3,7 +3,16 @@ import React from "react";
 import { contractsData } from "../contracts/index";
 
 export default function HomePage({ activeContract }) {
-  const contract = contractsData[activeContract];
+  const contract = activeContract ? contractsData[activeContract] : null;
+
+  if (!contract) {
+    return (
+      <div className="content-section">
+        <div className="section-title">Contract Not Found</div>
+        <p>Please select a contract from the sidebar to get started.</p>
+      </div>
+    );
+  }
 
   const highlightCode = (code) => {
     return code;
@@ -21,14 +30,22 @@ export default function HomePage({ activeContract }) {
     <>
       <div className="content-section">
         <div className="section-title">📺 Video Tutorial</div>
+        {!contract.video && (
+          <div className="no-video">
+            No video tutorial available for this contract.
+          </div>
+        )}
         <div className="video-container">
-          <iframe
-            className="video-embed"
-            src={`https://www.youtube.com/embed/${contract.video}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          {contract.video && (
+            <iframe
+              className="video-embed"
+              src={`https://www.youtube.com/embed/${contract.video}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Contract tutorial video"
+            />
+          )}
         </div>
       </div>
 

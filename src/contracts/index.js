@@ -1,17 +1,17 @@
 // contracts/index.js
 // Import all contracts
-import SimpleStorage from "./beginner/SimpleStorage";
-import Counter from "./beginner/Counter";
-import Greeting from "./beginner/Greeting";
-import ERC20Token from "./intermediate/ERC20Token";
-import NFT from "./intermediate/NFT";
+import staking from "./smartContracts/staking";
+import vesting from "./smartContracts/vesting";
+import Greeting from "./smartContracts/Greeting";
+import ERC20Token from "./security/ERC20Token";
+import NFT from "./security/NFT";
 import DeFiProtocol from "./advanced/DeFiProtocol";
 import DAO from "./advanced/DAO";
 
 // Array of all contracts
 const allContracts = [
-  SimpleStorage,
-  Counter,
+  staking,
+  vesting,
   Greeting,
   ERC20Token,
   NFT,
